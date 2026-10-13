@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Testes, type checking e cobertura
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Variáveis e credenciais locais
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+
+# Configurações locais de editor
+.vscode/*
+!.vscode/extensions.json
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Saídas locais do pipeline
+/data/bronze/
+/data/silver/
+/data/gold/
+/spark-warehouse/
+/metastore_db/
+derby.log
+*.log
+checkpoints/
