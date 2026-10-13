@@ -1,5 +1,7 @@
 from pyspark.sql import functions as f
 from pyspark.sql import types as t
+from pyspark.sql import DataFrame
+
 def normalize_hourly_data(df: DataFrame) -> DataFrame:
     df_zipped = df.withColumn("hourly_per_register", f.explode(f.arrays_zip("hourly.time", "hourly.temperature_2m",
                                                                         "hourly.relative_humidity_2m", "hourly.apparent_temperature",
